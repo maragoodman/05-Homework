@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <!-- link CSS -->
+    <link rel="stylesheet" href="CSS/style.css" />
+    <!-- link javascript -->
+    <script defer src="js/logic.js"></script>
+    <!-- <script defer src="js/questions.js."></script>
+    <script defer src="js/scores.js"></script> -->
+    <!-- 
+    <style>
+      .answerBtn {
+        display: block;
+        width: 200px;
+        margin: 10px;
+      }
+    </style> -->
+  </head>
+  <body>
+    <div class="container">
+      <div id="question-container" class="hidden">
+        <div id="question">Question</div>
+        <div id="answer-buttons" class="btn-grid">
+          <button class="btn">Answer 1</button>
+          <button class="btn">Answer 2</button>
+          <button class="btn">Answer 3</button>
+          <button class="btn">Answer 4</button>
+        </div>
+      </div>
+      <div class="controls"></div>
+      <button id="start-btn" class="start-btn btn">Start</button>
+      <button id="next-btn" class="next-btn btn" hide>Next</button>
+    </div>
+    <!-- <script>
+      var currentQuestion = 0;
+      var questions = [
+        {
+          question: "1what is this?",
+          answers: ["a thing", "some stuff", "our parent context"],
+          answer: 2
+        },
+        {
+          question: "2what is this?",
+          answers: ["a thing", "some stuff", "our parent context"],
+          answer: 2
+        },
+        {
+          question: "3what is this?",
+          answers: ["a thing", "some stuff", "our parent context"],
+          answer: 2
+        },
+        {
+          question: "4what is this?",
+          answers: ["a thing", "some stuff", "our parent context"],
+          answer: 2
+        }
+      ];
+      // generate questions
+      function generateQuestion(questionNumber) {
+        // gernerate question element
+        var questionsContainer = document.getElementById("question");
+        var questionElement = document.createElement("div");
+        var cardHeader = document.createElement("div");
+        // generate question
+        cardHeader.className = "card-header";
+        cardHeader.textContent = questions[questionNumber].question;
+        questionElement.appendChild(cardHeader);
+        questionElement.className = "card";
+        //generate answers
+        var answers = document.createElement("div");
+        answers.className = "card-body";
+        // attach click event
+        answers.addEventListener("click", function(e) {
+          console.log(e.target.getAttribute("data-answer-index"));
+        });
+        //gereate btn for each answer
+        questions[questionNumber].answers.forEach((answer, answerIndex) => {
+          var answerBtn = document.createElement("div");
+          answerBtn.className = "btn btn-primary answerBtn";
+          answerBtn.setAttribute("data-answer-index", answerIndex);
+          answerBtn.textContent = answer;
+          answers.appendChild(answerBtn);
+        });
+        questionsContainer.appendChild(questionElement);
+        questionsContainer.appendChild(answers);
+      }
+      generateQuestion(currentQuestion);
+    </script> -->
+  </body>
+</html>
